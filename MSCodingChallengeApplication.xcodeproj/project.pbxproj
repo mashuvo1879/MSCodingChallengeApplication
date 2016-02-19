@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		EF6E6A321C7657DD00DFFC7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6A311C7657DD00DFFC7D /* main.m */; };
 		EF6E6A351C7657DD00DFFC7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6A341C7657DD00DFFC7D /* AppDelegate.m */; };
-		EF6E6A381C7657DD00DFFC7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6A371C7657DD00DFFC7D /* ViewController.m */; };
+		EF6E6A381C7657DD00DFFC7D /* MSCodingChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6A371C7657DD00DFFC7D /* MSCodingChallengeViewController.m */; };
 		EF6E6A3B1C7657DD00DFFC7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6E6A391C7657DD00DFFC7D /* Main.storyboard */; };
 		EF6E6A3D1C7657DD00DFFC7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6E6A3C1C7657DD00DFFC7D /* Assets.xcassets */; };
 		EF6E6A401C7657DD00DFFC7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6E6A3E1C7657DD00DFFC7D /* LaunchScreen.storyboard */; };
 		EF6E6A4B1C7657DD00DFFC7D /* MSCodingChallengeApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6A4A1C7657DD00DFFC7D /* MSCodingChallengeApplicationTests.m */; };
+		EF6E6A581C765DD500DFFC7D /* MSFavoriteObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6A561C765DD500DFFC7D /* MSFavoriteObjectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +32,8 @@
 		EF6E6A311C7657DD00DFFC7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF6E6A331C7657DD00DFFC7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EF6E6A341C7657DD00DFFC7D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EF6E6A361C7657DD00DFFC7D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EF6E6A371C7657DD00DFFC7D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF6E6A361C7657DD00DFFC7D /* MSCodingChallengeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCodingChallengeViewController.h; sourceTree = "<group>"; };
+		EF6E6A371C7657DD00DFFC7D /* MSCodingChallengeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCodingChallengeViewController.m; sourceTree = "<group>"; };
 		EF6E6A3A1C7657DD00DFFC7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF6E6A3C1C7657DD00DFFC7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF6E6A3F1C7657DD00DFFC7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +41,8 @@
 		EF6E6A461C7657DD00DFFC7D /* MSCodingChallengeApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSCodingChallengeApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6E6A4A1C7657DD00DFFC7D /* MSCodingChallengeApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCodingChallengeApplicationTests.m; sourceTree = "<group>"; };
 		EF6E6A4C1C7657DD00DFFC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF6E6A551C765DD500DFFC7D /* MSFavoriteObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFavoriteObjectViewController.h; sourceTree = "<group>"; };
+		EF6E6A561C765DD500DFFC7D /* MSFavoriteObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFavoriteObjectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +86,10 @@
 			children = (
 				EF6E6A331C7657DD00DFFC7D /* AppDelegate.h */,
 				EF6E6A341C7657DD00DFFC7D /* AppDelegate.m */,
-				EF6E6A361C7657DD00DFFC7D /* ViewController.h */,
-				EF6E6A371C7657DD00DFFC7D /* ViewController.m */,
+				EF6E6A361C7657DD00DFFC7D /* MSCodingChallengeViewController.h */,
+				EF6E6A371C7657DD00DFFC7D /* MSCodingChallengeViewController.m */,
+				EF6E6A551C765DD500DFFC7D /* MSFavoriteObjectViewController.h */,
+				EF6E6A561C765DD500DFFC7D /* MSFavoriteObjectViewController.m */,
 				EF6E6A391C7657DD00DFFC7D /* Main.storyboard */,
 				EF6E6A3C1C7657DD00DFFC7D /* Assets.xcassets */,
 				EF6E6A3E1C7657DD00DFFC7D /* LaunchScreen.storyboard */,
@@ -211,8 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF6E6A381C7657DD00DFFC7D /* ViewController.m in Sources */,
+				EF6E6A381C7657DD00DFFC7D /* MSCodingChallengeViewController.m in Sources */,
 				EF6E6A351C7657DD00DFFC7D /* AppDelegate.m in Sources */,
+				EF6E6A581C765DD500DFFC7D /* MSFavoriteObjectViewController.m in Sources */,
 				EF6E6A321C7657DD00DFFC7D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +408,7 @@
 				EF6E6A511C7657DD00DFFC7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF6E6A521C7657DD00DFFC7D /* Build configuration list for PBXNativeTarget "MSCodingChallengeApplicationTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +417,7 @@
 				EF6E6A541C7657DD00DFFC7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
