@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Coding Challenge View Controller-->
@@ -126,7 +127,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="yKy-Yf-F12"/>
+                    <navigationItem key="navigationItem" id="yKy-Yf-F12">
+                        <barButtonItem key="rightBarButtonItem" title="Favorites" id="eea-x0-lpg">
+                            <connections>
+                                <action selector="displayFavorites:" destination="BYZ-38-t0r" id="1U0-0C-jAp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="t6l-QT-27A" id="RRw-KP-BLm"/>
                         <outlet property="creationInfo" destination="K9l-uE-QPE" id="orv-Cs-NxG"/>
@@ -136,6 +143,7 @@
                         <outlet property="markAsFavoriteButton" destination="ycK-68-msq" id="ukd-1l-acg"/>
                         <outlet property="pickObjectButton" destination="sqa-n1-p4z" id="X8t-7l-osS"/>
                         <outlet property="userInfo" destination="wNP-sN-S70" id="3x1-Qh-XKm"/>
+                        <segue destination="Mew-dg-vBO" kind="show" identifier="MSFavorites" id="Nfq-yM-o7q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -153,8 +161,33 @@
                     <view key="view" contentMode="scaleToFill" id="nGn-Py-AZ5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XpQ-Oa-70d">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Mew-dg-vBO" id="XGk-CS-91N"/>
+                                    <outlet property="delegate" destination="Mew-dg-vBO" id="HE7-vY-0oE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="XpQ-Oa-70d" secondAttribute="trailing" id="96k-rr-VNy"/>
+                            <constraint firstItem="XpQ-Oa-70d" firstAttribute="leading" secondItem="nGn-Py-AZ5" secondAttribute="leadingMargin" id="Kkx-1x-Cvz"/>
+                            <constraint firstItem="XpQ-Oa-70d" firstAttribute="top" secondItem="Px7-aa-H7e" secondAttribute="bottom" id="O75-fM-LwR"/>
+                            <constraint firstItem="JJg-qm-7nD" firstAttribute="top" secondItem="XpQ-Oa-70d" secondAttribute="bottom" id="OCd-Nh-dU2"/>
+                            <constraint firstItem="XpQ-Oa-70d" firstAttribute="top" secondItem="Px7-aa-H7e" secondAttribute="bottom" id="wz3-XW-qNe"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="O75-fM-LwR"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="XpQ-Oa-70d" id="WET-ve-r44"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L71-wH-GCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

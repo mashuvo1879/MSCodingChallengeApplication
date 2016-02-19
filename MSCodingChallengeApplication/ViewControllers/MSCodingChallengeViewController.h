@@ -14,7 +14,6 @@
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) IBOutlet UIButton *pickObjectButton;
 @property (nonatomic, strong) IBOutlet UIButton *markAsFavoriteButton;
-@property (nonatomic, strong) IBOutlet UIButton *displayFavorites;
 @property (nonatomic, strong) IBOutlet UILabel *errorInfo;
 @property (nonatomic, strong) IBOutlet UILabel *dataInfo;
 @property (nonatomic, strong) IBOutlet UILabel *userInfo;

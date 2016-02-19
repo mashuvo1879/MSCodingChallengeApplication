@@ -13,9 +13,17 @@
 #import <MSCodingChallenge/MSUser.h>
 #import "MSUtility.h"
 
+static NSString *const MSNoObjectLeft = @"No more object left to pick.";
+static NSString *const MSErrorMsg = @"unable to load object.";
+static NSString *const MSCodingChallengeViewControllerTitle = @"Objects";
+static NSString *const MSPlaceholder = @"placeholder";
+static NSString *const MSNoImage = @"no-image";
+static NSString *const MSFavorites = @"MSFavorites";
+
 @interface MSCodingChallengeViewController () <MSCodingChallengeDelegate>
 
 @property (nonatomic, strong) MSCodingChallenge *codingChallenge;
+@property (nonatomic, strong) MSFavoriteObjectViewController *favoriteObjectViewController;
 
 @end
 
@@ -23,8 +31,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.title = @"Objects";
+    self.title = MSCodingChallengeViewControllerTitle;
+    self.favoriteObjectViewController = [[MSFavoriteObjectViewController alloc] init];
     self.codingChallenge = [[MSCodingChallenge alloc] initWithDelegate: self];
     [self.codingChallenge fetchObjects];
 }
@@ -41,7 +49,7 @@
 #pragma mark - Private methods
 - (void)resetObjectInfoFields
 {
-    self.imageView.image = [UIImage imageNamed:@"placeholder"];
+    self.imageView.image = [UIImage imageNamed:MSPlaceholder];
     self.dataInfo.text = @"";
     self.userInfo.text = @"";
     self.creationInfo.text = @"";
@@ -54,7 +62,7 @@
     self.activityIndicator.hidden = NO;
     [MSUtility loadImage:[NSURL URLWithString:object.objectData] withCompletion:^(NSData *imageData, NSError *error) {
         if (error) {
-            self.imageView.image = [UIImage imageNamed:@"no-image"];
+            self.imageView.image = [UIImage imageNamed:MSNoImage];
         }
         else {
             self.imageView.image = [UIImage imageWithData:imageData];
@@ -94,6 +102,16 @@
 
 - (IBAction)displayFavorites:(id)sender
 {
+    [self performSegueWithIdentifier:MSFavorites sender:sender];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:MSFavorites])
+    {
+        MSFavoriteObjectViewController *favoriteObjectViewController = [segue destinationViewController];
+        favoriteObjectViewController.favorites = self.codingChallenge.favoriteObjects;
+    }
 }
 
 #pragma mark - MSCodingChallengeDelegate methods
@@ -105,16 +123,14 @@
 
 - (void)noObjectLeftToPick:(MSCodingChallenge *)codingChallenge
 {
-    self.errorInfo.text = @"No more object left to pick.";
+    self.errorInfo.text = MSNoObjectLeft;
     self.pickObjectButton.enabled = NO;
     self.markAsFavoriteButton.enabled = NO;
 }
 
 - (void)codingChallenge:(MSCodingChallenge *)codingChallenge didFailWithError:(NSError *)error
 {
-    self.errorInfo.text = @"unable to load object.";
+    self.errorInfo.text = MSErrorMsg;
 }
-
-
 
 @end
