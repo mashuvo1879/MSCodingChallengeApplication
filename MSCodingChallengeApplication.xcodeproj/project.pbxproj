@@ -17,6 +17,8 @@
 		EF6E6BD11C77793A00DFFC7D /* MSCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6E6BD01C77793A00DFFC7D /* MSCodingChallenge.framework */; };
 		EF6E6BD71C778F1F00DFFC7D /* MSCodingChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6BD41C778F1F00DFFC7D /* MSCodingChallengeViewController.m */; };
 		EF6E6BD81C778F1F00DFFC7D /* MSFavoriteObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6BD61C778F1F00DFFC7D /* MSFavoriteObjectViewController.m */; };
+		EF89ABF41C77ACEF00F05A04 /* MSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF89ABF21C77ACEF00F05A04 /* MSTableViewCell.m */; };
+		EF89ABF51C77ACEF00F05A04 /* MSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF89ABF31C77ACEF00F05A04 /* MSTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		EF6E6BD41C778F1F00DFFC7D /* MSCodingChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCodingChallengeViewController.m; sourceTree = "<group>"; };
 		EF6E6BD51C778F1F00DFFC7D /* MSFavoriteObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFavoriteObjectViewController.h; sourceTree = "<group>"; };
 		EF6E6BD61C778F1F00DFFC7D /* MSFavoriteObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFavoriteObjectViewController.m; sourceTree = "<group>"; };
+		EF89ABF11C77ACEF00F05A04 /* MSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTableViewCell.h; sourceTree = "<group>"; };
+		EF89ABF21C77ACEF00F05A04 /* MSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTableViewCell.m; sourceTree = "<group>"; };
+		EF89ABF31C77ACEF00F05A04 /* MSTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +100,7 @@
 				EF6E6A341C7657DD00DFFC7D /* AppDelegate.m */,
 				EF6E6BCD1C775E2B00DFFC7D /* MSUtility.h */,
 				EF6E6BCE1C775E2B00DFFC7D /* MSUtility.m */,
+				EF89ABE01C77A3DB00F05A04 /* CustomCell */,
 				EF6E6BD21C778F1F00DFFC7D /* ViewControllers */,
 				EF6E6A391C7657DD00DFFC7D /* Main.storyboard */,
 				EF6E6A3C1C7657DD00DFFC7D /* Assets.xcassets */,
@@ -140,6 +146,16 @@
 				EF6E6BD61C778F1F00DFFC7D /* MSFavoriteObjectViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EF89ABE01C77A3DB00F05A04 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF89ABF11C77ACEF00F05A04 /* MSTableViewCell.h */,
+				EF89ABF21C77ACEF00F05A04 /* MSTableViewCell.m */,
+				EF89ABF31C77ACEF00F05A04 /* MSTableViewCell.xib */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF89ABF51C77ACEF00F05A04 /* MSTableViewCell.xib in Resources */,
 				EF6E6A401C7657DD00DFFC7D /* LaunchScreen.storyboard in Resources */,
 				EF6E6A3D1C7657DD00DFFC7D /* Assets.xcassets in Resources */,
 				EF6E6A3B1C7657DD00DFFC7D /* Main.storyboard in Resources */,
@@ -245,6 +262,7 @@
 				EF6E6BCF1C775E2B00DFFC7D /* MSUtility.m in Sources */,
 				EF6E6A351C7657DD00DFFC7D /* AppDelegate.m in Sources */,
 				EF6E6BD81C778F1F00DFFC7D /* MSFavoriteObjectViewController.m in Sources */,
+				EF89ABF41C77ACEF00F05A04 /* MSTableViewCell.m in Sources */,
 				EF6E6BD71C778F1F00DFFC7D /* MSCodingChallengeViewController.m in Sources */,
 				EF6E6A321C7657DD00DFFC7D /* main.m in Sources */,
 			);

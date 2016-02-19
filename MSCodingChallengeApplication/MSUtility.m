@@ -10,7 +10,7 @@
 
 @implementation MSUtility
 
-+ (void)loadImage:(NSURL *)url withCompletion:(void (^)( NSData *imageData, NSError *error))completion
++ (void)imageData:(NSURL *)url withCompletion:(void (^)( NSData *imageData, NSError *error))completion
 {
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:defaultConfigObject];

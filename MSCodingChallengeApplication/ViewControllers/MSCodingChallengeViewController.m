@@ -60,7 +60,7 @@ static NSString *const MSFavorites = @"MSFavorites";
 - (void)loadObjectImage:(MSObject *)object
 {
     self.activityIndicator.hidden = NO;
-    [MSUtility loadImage:[NSURL URLWithString:object.objectData] withCompletion:^(NSData *imageData, NSError *error) {
+    [MSUtility imageData:[NSURL URLWithString:object.objectData] withCompletion:^(NSData *imageData, NSError *error) {
         if (error) {
             self.imageView.image = [UIImage imageNamed:MSNoImage];
         }
@@ -88,6 +88,7 @@ static NSString *const MSFavorites = @"MSFavorites";
         self.pickObjectButton.enabled = YES;
         self.markAsFavoriteButton.enabled = YES;
         self.dataInfo.text = object.objectData;
+        self.imageView.image = [UIImage imageNamed:MSNoImage];
     }
     if (object) {
         self.userInfo.text = [NSString stringWithFormat:@"Name : %@ Country : %@",object.user.name, object.user.country];
