@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MSFavoriteObjectViewController.h
 //  MSCodingChallengeApplication
 //
 //  Created by Masud Shuvo on 2/19/16.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MSCodingChallengeViewController : UIViewController
+@interface MSFavoriteObjectViewController : UIViewController
 
+@property (nonatomic, strong) NSArray *favorites;
 
 @end
-

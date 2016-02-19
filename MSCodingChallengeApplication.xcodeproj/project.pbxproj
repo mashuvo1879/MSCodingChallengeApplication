@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		EF6E6A321C7657DD00DFFC7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6A311C7657DD00DFFC7D /* main.m */; };
 		EF6E6A351C7657DD00DFFC7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6A341C7657DD00DFFC7D /* AppDelegate.m */; };
-		EF6E6A381C7657DD00DFFC7D /* MSCodingChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6A371C7657DD00DFFC7D /* MSCodingChallengeViewController.m */; };
 		EF6E6A3B1C7657DD00DFFC7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6E6A391C7657DD00DFFC7D /* Main.storyboard */; };
 		EF6E6A3D1C7657DD00DFFC7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6E6A3C1C7657DD00DFFC7D /* Assets.xcassets */; };
 		EF6E6A401C7657DD00DFFC7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6E6A3E1C7657DD00DFFC7D /* LaunchScreen.storyboard */; };
 		EF6E6A4B1C7657DD00DFFC7D /* MSCodingChallengeApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6A4A1C7657DD00DFFC7D /* MSCodingChallengeApplicationTests.m */; };
-		EF6E6A581C765DD500DFFC7D /* MSFavoriteObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6A561C765DD500DFFC7D /* MSFavoriteObjectViewController.m */; };
+		EF6E6BCF1C775E2B00DFFC7D /* MSUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6BCE1C775E2B00DFFC7D /* MSUtility.m */; };
+		EF6E6BD11C77793A00DFFC7D /* MSCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6E6BD01C77793A00DFFC7D /* MSCodingChallenge.framework */; };
+		EF6E6BD71C778F1F00DFFC7D /* MSCodingChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6BD41C778F1F00DFFC7D /* MSCodingChallengeViewController.m */; };
+		EF6E6BD81C778F1F00DFFC7D /* MSFavoriteObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E6BD61C778F1F00DFFC7D /* MSFavoriteObjectViewController.m */; };
+		EF89ABF41C77ACEF00F05A04 /* MSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF89ABF21C77ACEF00F05A04 /* MSTableViewCell.m */; };
+		EF89ABF51C77ACEF00F05A04 /* MSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF89ABF31C77ACEF00F05A04 /* MSTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,8 +36,6 @@
 		EF6E6A311C7657DD00DFFC7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF6E6A331C7657DD00DFFC7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EF6E6A341C7657DD00DFFC7D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EF6E6A361C7657DD00DFFC7D /* MSCodingChallengeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSCodingChallengeViewController.h; sourceTree = "<group>"; };
-		EF6E6A371C7657DD00DFFC7D /* MSCodingChallengeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCodingChallengeViewController.m; sourceTree = "<group>"; };
 		EF6E6A3A1C7657DD00DFFC7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF6E6A3C1C7657DD00DFFC7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF6E6A3F1C7657DD00DFFC7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,8 +43,16 @@
 		EF6E6A461C7657DD00DFFC7D /* MSCodingChallengeApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSCodingChallengeApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6E6A4A1C7657DD00DFFC7D /* MSCodingChallengeApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSCodingChallengeApplicationTests.m; sourceTree = "<group>"; };
 		EF6E6A4C1C7657DD00DFFC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF6E6A551C765DD500DFFC7D /* MSFavoriteObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFavoriteObjectViewController.h; sourceTree = "<group>"; };
-		EF6E6A561C765DD500DFFC7D /* MSFavoriteObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFavoriteObjectViewController.m; sourceTree = "<group>"; };
+		EF6E6BCD1C775E2B00DFFC7D /* MSUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUtility.h; sourceTree = "<group>"; };
+		EF6E6BCE1C775E2B00DFFC7D /* MSUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUtility.m; sourceTree = "<group>"; };
+		EF6E6BD01C77793A00DFFC7D /* MSCodingChallenge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MSCodingChallenge.framework; sourceTree = "<group>"; };
+		EF6E6BD31C778F1F00DFFC7D /* MSCodingChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCodingChallengeViewController.h; sourceTree = "<group>"; };
+		EF6E6BD41C778F1F00DFFC7D /* MSCodingChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCodingChallengeViewController.m; sourceTree = "<group>"; };
+		EF6E6BD51C778F1F00DFFC7D /* MSFavoriteObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFavoriteObjectViewController.h; sourceTree = "<group>"; };
+		EF6E6BD61C778F1F00DFFC7D /* MSFavoriteObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFavoriteObjectViewController.m; sourceTree = "<group>"; };
+		EF89ABF11C77ACEF00F05A04 /* MSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTableViewCell.h; sourceTree = "<group>"; };
+		EF89ABF21C77ACEF00F05A04 /* MSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTableViewCell.m; sourceTree = "<group>"; };
+		EF89ABF31C77ACEF00F05A04 /* MSTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6E6BD11C77793A00DFFC7D /* MSCodingChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +79,7 @@
 			children = (
 				EF6E6A2F1C7657DD00DFFC7D /* MSCodingChallengeApplication */,
 				EF6E6A491C7657DD00DFFC7D /* MSCodingChallengeApplicationTests */,
+				EF6E6BC61C774F4800DFFC7D /* MSFramework */,
 				EF6E6A2E1C7657DD00DFFC7D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,10 +98,10 @@
 			children = (
 				EF6E6A331C7657DD00DFFC7D /* AppDelegate.h */,
 				EF6E6A341C7657DD00DFFC7D /* AppDelegate.m */,
-				EF6E6A361C7657DD00DFFC7D /* MSCodingChallengeViewController.h */,
-				EF6E6A371C7657DD00DFFC7D /* MSCodingChallengeViewController.m */,
-				EF6E6A551C765DD500DFFC7D /* MSFavoriteObjectViewController.h */,
-				EF6E6A561C765DD500DFFC7D /* MSFavoriteObjectViewController.m */,
+				EF6E6BCD1C775E2B00DFFC7D /* MSUtility.h */,
+				EF6E6BCE1C775E2B00DFFC7D /* MSUtility.m */,
+				EF89ABE01C77A3DB00F05A04 /* CustomCell */,
+				EF6E6BD21C778F1F00DFFC7D /* ViewControllers */,
 				EF6E6A391C7657DD00DFFC7D /* Main.storyboard */,
 				EF6E6A3C1C7657DD00DFFC7D /* Assets.xcassets */,
 				EF6E6A3E1C7657DD00DFFC7D /* LaunchScreen.storyboard */,
@@ -114,6 +126,36 @@
 				EF6E6A4C1C7657DD00DFFC7D /* Info.plist */,
 			);
 			path = MSCodingChallengeApplicationTests;
+			sourceTree = "<group>";
+		};
+		EF6E6BC61C774F4800DFFC7D /* MSFramework */ = {
+			isa = PBXGroup;
+			children = (
+				EF6E6BD01C77793A00DFFC7D /* MSCodingChallenge.framework */,
+			);
+			name = MSFramework;
+			path = MSCodingChallengeApplication/MSFramework;
+			sourceTree = "<group>";
+		};
+		EF6E6BD21C778F1F00DFFC7D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF6E6BD31C778F1F00DFFC7D /* MSCodingChallengeViewController.h */,
+				EF6E6BD41C778F1F00DFFC7D /* MSCodingChallengeViewController.m */,
+				EF6E6BD51C778F1F00DFFC7D /* MSFavoriteObjectViewController.h */,
+				EF6E6BD61C778F1F00DFFC7D /* MSFavoriteObjectViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EF89ABE01C77A3DB00F05A04 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF89ABF11C77ACEF00F05A04 /* MSTableViewCell.h */,
+				EF89ABF21C77ACEF00F05A04 /* MSTableViewCell.m */,
+				EF89ABF31C77ACEF00F05A04 /* MSTableViewCell.xib */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF89ABF51C77ACEF00F05A04 /* MSTableViewCell.xib in Resources */,
 				EF6E6A401C7657DD00DFFC7D /* LaunchScreen.storyboard in Resources */,
 				EF6E6A3D1C7657DD00DFFC7D /* Assets.xcassets in Resources */,
 				EF6E6A3B1C7657DD00DFFC7D /* Main.storyboard in Resources */,
@@ -216,9 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF6E6A381C7657DD00DFFC7D /* MSCodingChallengeViewController.m in Sources */,
+				EF6E6BCF1C775E2B00DFFC7D /* MSUtility.m in Sources */,
 				EF6E6A351C7657DD00DFFC7D /* AppDelegate.m in Sources */,
-				EF6E6A581C765DD500DFFC7D /* MSFavoriteObjectViewController.m in Sources */,
+				EF6E6BD81C778F1F00DFFC7D /* MSFavoriteObjectViewController.m in Sources */,
+				EF89ABF41C77ACEF00F05A04 /* MSTableViewCell.m in Sources */,
+				EF6E6BD71C778F1F00DFFC7D /* MSCodingChallengeViewController.m in Sources */,
 				EF6E6A321C7657DD00DFFC7D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +392,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MSCodingChallengeApplication/MSFramework",
+				);
 				INFOPLIST_FILE = MSCodingChallengeApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MS.MSCodingChallengeApplication;
@@ -358,6 +407,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MSCodingChallengeApplication/MSFramework",
+				);
 				INFOPLIST_FILE = MSCodingChallengeApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MS.MSCodingChallengeApplication;
