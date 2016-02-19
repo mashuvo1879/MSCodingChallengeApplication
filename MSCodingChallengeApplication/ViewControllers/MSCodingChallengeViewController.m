@@ -29,36 +29,16 @@
     [self.codingChallenge fetchObjects];
 }
 
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)pickObject:(id)sender
-{
-    [self resetObjectInfoFields];
-    
-    MSObject *object =  [self.codingChallenge pickObject];
-    
-    if (object.dataType == MSDataTypeImage && object.objectData) {
-        [self loadObjectImage:object];
-    }
-    else {
-        self.pickObjectButton.enabled = YES;
-        self.markAsFavoriteButton.enabled = YES;
-        self.dataInfo.text = object.objectData;
-    }
-    if (object) {
-        self.userInfo.text = [NSString stringWithFormat:@"Name : %@ Country : %@",object.user.name, object.user.country];
-        self.creationInfo.text = object.creationInfo;
-    }
-}
-
-- (IBAction)markAsFavorite:(id)sender
-{
-    [self.codingChallenge markObjectAsFavorite];
-}
-
+#pragma mark - Private methods
 - (void)resetObjectInfoFields
 {
     self.imageView.image = [UIImage imageNamed:@"placeholder"];
@@ -86,6 +66,37 @@
     }];
 }
 
+#pragma mark - Public methods
+- (IBAction)pickObject:(id)sender
+{
+    [self resetObjectInfoFields];
+    
+    MSObject *object =  [self.codingChallenge pickObject];
+    
+    if (object.dataType == MSDataTypeImage && object.objectData) {
+        [self loadObjectImage:object];
+    }
+    else {
+        self.pickObjectButton.enabled = YES;
+        self.markAsFavoriteButton.enabled = YES;
+        self.dataInfo.text = object.objectData;
+    }
+    if (object) {
+        self.userInfo.text = [NSString stringWithFormat:@"Name : %@ Country : %@",object.user.name, object.user.country];
+        self.creationInfo.text = object.creationInfo;
+    }
+}
+
+- (IBAction)markAsFavorite:(id)sender
+{
+    [self.codingChallenge markObjectAsFavorite];
+}
+
+- (IBAction)displayFavorites:(id)sender
+{
+}
+
+#pragma mark - MSCodingChallengeDelegate methods
 - (void)objectsReadyToPick:(MSCodingChallenge *)codingChallenge
 {
     self.pickObjectButton.enabled = YES;
@@ -104,8 +115,6 @@
     self.errorInfo.text = @"unable to load object.";
 }
 
--(BOOL)prefersStatusBarHidden{
-    return YES;
-}
+
 
 @end
