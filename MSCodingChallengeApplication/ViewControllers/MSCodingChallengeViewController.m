@@ -51,19 +51,20 @@ static NSString *const MSFavorites = @"MSFavorites";
 - (void)enablePickObjectAndFavoriteObjectButtons
 {
     self.pickObjectButton.enabled = YES;
-    self.pickObjectButton.titleLabel.textColor = [UIColor colorWithRed:0.0 green:0.604 blue:0.090 alpha:1.000];
+    [self.pickObjectButton setTitleColor:[UIColor colorWithRed:0.0 green:0.604 blue:0.090 alpha:1.0] forState:UIControlStateNormal];
+
     
     self.markAsFavoriteButton.enabled = YES;
-    self.markAsFavoriteButton.titleLabel.textColor = [UIColor colorWithRed:0.0 green:0.604 blue:0.090 alpha:1.000];
+    [self.markAsFavoriteButton setTitleColor:[UIColor colorWithRed:0.0 green:0.604 blue:0.090 alpha:1.0] forState:UIControlStateNormal];
 }
 
 - (void)disablePickObjectAndFavoriteObjectButtons
 {
     self.pickObjectButton.enabled = NO;
-    self.pickObjectButton.titleLabel.textColor = [UIColor grayColor];
+    [self.pickObjectButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     
     self.markAsFavoriteButton.enabled = NO;
-    self.pickObjectButton.titleLabel.textColor = [UIColor grayColor];
+    [self.markAsFavoriteButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
 }
 
 - (void)resetObjectInfoFields
@@ -95,11 +96,10 @@ static NSString *const MSFavorites = @"MSFavorites";
 - (IBAction)pickObject:(id)sender
 {
     [self resetObjectInfoFields];
-    if ([self.errorInfo.text length]) {
+    MSObject *object =  [self.codingChallenge pickObject];
+    if (!object) {
         return;
     }
-    MSObject *object =  [self.codingChallenge pickObject];
-    
     if (object.dataType == MSDataTypeImage && object.objectData) {
         [self loadObjectImage:object];
     }
