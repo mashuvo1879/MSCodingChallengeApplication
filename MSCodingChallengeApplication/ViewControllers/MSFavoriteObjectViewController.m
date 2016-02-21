@@ -12,8 +12,13 @@
 #import "MSTableViewCell.h"
 #import "MSUtility.h"
 
+static NSString *const MSTableViewCellNibName = @"MSTableViewCell";
+
 @interface MSFavoriteObjectViewController ()<UITableViewDelegate, UITableViewDelegate>
 
+/**
+ *   This table view will display all stored favorite objects.
+ */
 @property  (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end
@@ -23,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
 }
 
 -(BOOL)prefersStatusBarHidden{
@@ -36,19 +42,18 @@
 
 #pragma - mark UITableViewDataSource Delegate Methods
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //If no offer found, According to pdf, need to display "No offers". So returning 1 to for displaying that line.
     return [self.favorites count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *cellIdentifier = [NSString stringWithFormat:@"Cell%tu",indexPath.row];
-    MSTableViewCell *cell = (MSTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    NSString *cellIdentifier = [NSString stringWithFormat:@"Cell %tu",indexPath.row];
+    MSTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil)
     {
-        NSArray *nibArray = [[NSBundle mainBundle] loadNibNamed:@"MSTableViewCell" owner:self options:nil];
-        cell = [nibArray objectAtIndex:0];
+        [tableView registerNib:[UINib nibWithNibName:MSTableViewCellNibName bundle:nil] forCellReuseIdentifier:cellIdentifier];
+        cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         cell.objectImage.image = [UIImage imageNamed:@"placeholder"];
         MSObject *object = [self.favorites objectAtIndex:indexPath.row];
         cell.userInfo.text = [NSString stringWithFormat:@"Name:%@ Country:%@",object.user.name,object.user.country];

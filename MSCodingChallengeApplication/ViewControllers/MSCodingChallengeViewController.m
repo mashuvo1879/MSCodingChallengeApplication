@@ -47,14 +47,32 @@ static NSString *const MSFavorites = @"MSFavorites";
 }
 
 #pragma mark - Private methods
+
+- (void)enablePickObjectAndFavoriteObjectButtons
+{
+    self.pickObjectButton.enabled = YES;
+    self.pickObjectButton.titleLabel.textColor = [UIColor colorWithRed:0.0 green:0.604 blue:0.090 alpha:1.000];
+    
+    self.markAsFavoriteButton.enabled = YES;
+    self.markAsFavoriteButton.titleLabel.textColor = [UIColor colorWithRed:0.0 green:0.604 blue:0.090 alpha:1.000];
+}
+
+- (void)disablePickObjectAndFavoriteObjectButtons
+{
+    self.pickObjectButton.enabled = NO;
+    self.pickObjectButton.titleLabel.textColor = [UIColor grayColor];
+    
+    self.markAsFavoriteButton.enabled = NO;
+    self.pickObjectButton.titleLabel.textColor = [UIColor grayColor];
+}
+
 - (void)resetObjectInfoFields
 {
     self.imageView.image = [UIImage imageNamed:MSPlaceholder];
     self.dataInfo.text = @"";
     self.userInfo.text = @"";
     self.creationInfo.text = @"";
-    self.pickObjectButton.enabled = NO;
-    self.markAsFavoriteButton.enabled = NO;
+    [self disablePickObjectAndFavoriteObjectButtons];
 }
 
 - (void)loadObjectImage:(MSObject *)object
@@ -69,8 +87,7 @@ static NSString *const MSFavorites = @"MSFavorites";
         }
         
         self.activityIndicator.hidden = YES;
-        self.pickObjectButton.enabled = YES;
-        self.markAsFavoriteButton.enabled = YES;
+        [self enablePickObjectAndFavoriteObjectButtons];
     }];
 }
 
@@ -78,15 +95,16 @@ static NSString *const MSFavorites = @"MSFavorites";
 - (IBAction)pickObject:(id)sender
 {
     [self resetObjectInfoFields];
-    
+    if ([self.errorInfo.text length]) {
+        return;
+    }
     MSObject *object =  [self.codingChallenge pickObject];
     
     if (object.dataType == MSDataTypeImage && object.objectData) {
         [self loadObjectImage:object];
     }
     else {
-        self.pickObjectButton.enabled = YES;
-        self.markAsFavoriteButton.enabled = YES;
+        [self enablePickObjectAndFavoriteObjectButtons];
         self.dataInfo.text = object.objectData;
         self.imageView.image = [UIImage imageNamed:MSNoImage];
     }
@@ -118,20 +136,19 @@ static NSString *const MSFavorites = @"MSFavorites";
 #pragma mark - MSCodingChallengeDelegate methods
 - (void)objectsReadyToPick:(MSCodingChallenge *)codingChallenge
 {
-    self.pickObjectButton.enabled = YES;
-    self.markAsFavoriteButton.enabled = YES;
+    [self enablePickObjectAndFavoriteObjectButtons];
 }
 
 - (void)noObjectLeftToPick:(MSCodingChallenge *)codingChallenge
 {
     self.errorInfo.text = MSNoObjectLeft;
-    self.pickObjectButton.enabled = NO;
-    self.markAsFavoriteButton.enabled = NO;
+    [self disablePickObjectAndFavoriteObjectButtons];
 }
 
 - (void)codingChallenge:(MSCodingChallenge *)codingChallenge didFailWithError:(NSError *)error
 {
     self.errorInfo.text = MSErrorMsg;
+    [self resetObjectInfoFields];
 }
 
 @end

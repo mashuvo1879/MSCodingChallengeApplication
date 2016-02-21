@@ -14,17 +14,17 @@
 @interface MSCodingChallenge : NSObject
 
 /**
- *   The delegate of the MSCodingChallenge that you want to receive messages of what is happening. Not required.
+ *   The delegate of the MSCodingChallenge that you want to receive messages of what is happening.
  */
 @property (nonatomic, assign) id <MSCodingChallengeDelegate> delegate;
 
 /**
- *   Array of MSObjects, which user select as favorite.
+ *   Array of MSObjects, which user has select as favorite.
  */
 @property (nonatomic, strong) NSArray *favoriteObjects;
 
 /**
- *   Returns an MSCodingChallenge object.
+ *   Returns a MSCodingChallenge object.
  *
  *   @param codingChallengeDelegate The delegate of the MSCodingChallenge that you want to receive messages of what is happening.
  *
@@ -33,17 +33,17 @@
 - (instancetype)initWithDelegate:(id<MSCodingChallengeDelegate>)codingChallengeDelegate;
 
 /**
- *   Fetch objects. So that user can pick random object.
+ *   Fetch objects. So that later user can pick random object.
  */
 - (void)fetchObjects;
 
 /**
- *   Randomly pick an MSObject.
+ *   Randomly pick an MSObject from avaiable objects.
  */
 - (MSObject *)pickObject;
 
 /**
- *   Mark displaying MSObject as favorite.
+ *   Mark displaying MSObject as favorite. The object will sent to favoriteObjects array.
  */
 - (void)markObjectAsFavorite;
 

@@ -23,7 +23,7 @@ typedef NS_ENUM(NSUInteger, MSDataType) {
 @interface MSObject : NSObject
 
 /**
- *  When the object is created.
+ *  Object's creation info, e.g. "Created 2 days ago", “Created just now” etc.
  */
 @property (nonatomic, strong) NSString *creationInfo;
 
