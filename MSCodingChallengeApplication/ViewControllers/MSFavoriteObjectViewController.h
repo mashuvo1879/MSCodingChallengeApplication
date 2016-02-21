@@ -10,6 +10,9 @@
 
 @interface MSFavoriteObjectViewController : UIViewController
 
+/**
+ *   List of all favorite objects.
+ */
 @property (nonatomic, strong) NSArray *favorites;
 
 @end
